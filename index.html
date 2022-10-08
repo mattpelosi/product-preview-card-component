@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --border-radius: 8px;
+        --card-height: 400px;
+        --color-white: hsl(0, 0%, 100%);
+        --color-text-body: hsl(228, 12%, 48%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        /* height: 100vh;
+        width: 100vw; */
+        background-color: hsl(30, 38%, 92%);
+        margin: 0;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .card {
+        width: max-content;
+        height: var(--card-height);
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .picture-wrapper img {
+        height: var(--card-height);
+        width: 250px;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        display: block;
+      }
+
+      .picture-wrapper {
+        display: inline-block;
+      }
+
+      .item-details {
+        width: 275px;
+        height: var(--card-height);
+        padding: 25px;
+        float: right;
+      }
+
+      .pricing {
+        margin: 20px 0;
+      }
+
+      .pricing h2,
+      .pricing p {
+        display: inline;
+      }
+
+      .pricing h2 {
+        font-family: 'Fraunces', serif;
+        color: hsl(158, 36%, 37%);
+      }
+
+      .pricing p {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--color-text-body);
+        position: relative;
+        left: 10px;
+        bottom: 3px;
+        text-decoration: line-through;
+      }
+
+      button img {
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+      }
+
+      button {
+        color: var(--color-white);
+        background-color: transparent;
+        border-style: none;
+        font-size: 12px;
+        background-color: hsl(158, 36%, 37%);
+        border-radius: var(--border-radius);
+        height: 40px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:active {
+        transform: scale(0.97);
+      }
+
+      .item-name {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        width: 180px;
+        font-size: 28px;
+      }
+
+      .item-description {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--color-text-body);
+        font-weight: 500;
+      }
+
+      .item-type {
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 0;
+        letter-spacing: 2px;
+        color: var(--color-text-body);
+        font-weight: 500;
+      }
+
+      @media (max-width: 375px) {
+        .card {
+          width: auto;
+          height: 100%;
+          position: static;
+          top: 0;
+          left: 0;
+          transform: none;
+          margin: 20px 14px;
+        }
+
+        .picture-wrapper img {
+          width: 100%;
+          height: auto;
+        }
+
+        .item-details {
+          float: none;
+          width: 100%;
+        }
+
+        .picture-wrapper img {
+          border-top-left-radius: var(--border-radius);
+          border-bottom-left-radius: 0;
+          border-top-right-radius: var(--border-radius);
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="picture-wrapper">
+        <picture>
+          <source
+            media="(max-width: 375px)"
+            srcset="./images/image-product-mobile.jpg"
+          />
+          <img src="./images/image-product-desktop.jpg" />
+        </picture>
+      </div>
+      <div class="item-details">
+        <p class="item-type">PERFUME</p>
+        <h2 class="item-name">Gabrielle Essence Eau De Parfum</h2>
+        <p class="item-description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="pricing">
+          <h2>$149.99</h2>
+          <p>$169.99</p>
+        </div>
+        <button><img src="/images/icon-cart.svg" />Add to Cart</button>
+      </div>
+    </div>
+  </body>
+</html>
